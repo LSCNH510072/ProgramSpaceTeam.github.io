@@ -1,10 +1,10 @@
 @font-face {
     font-family:btfFont;
-    src: url(../TypeFont.woff2) format('woff2')
+    src: url(https://ProgramSpaceTeam.github.io/cloud/font/TypeFont.woff2) format('woff2')
 }
 @font-face {
     font-family:font2;
-    src: url(Handwritten-English-2.woff2) format('woff2')
+    src: url(https://ProgramSpaceTeam.github.io/cloud/font/Handwritten-English-2.woff2) format('woff2')
 }
 body{
     font-family:"btfFont" !important;

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: def-font;
+    src: url(https://ProgramSpaceTeam.github.io/cloud/font/TypeFont.woff2) format('woff2');
+}
+
+body {
+    font-family: def-font;
+}
