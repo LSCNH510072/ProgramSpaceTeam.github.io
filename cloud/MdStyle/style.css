@@ -3,6 +3,11 @@
     src: url(https://ProgramSpaceTeam.github.io/cloud/font/TypeFont.woff2) format('woff2');
 }
 
+@font-face {
+    font-family: codes;
+    src: url(https://ProgramSpaceTeam.github.io/cloud/font/JBMomoFont/JetBrainsMono-Light.woff2) format('woff2');
+}
+
 body {
     font-family: def-font;
 }
@@ -63,6 +68,17 @@ p {
 
 a {
     text-decoration: none;
+}
+
+pre {
+    font-family: codes;
+    border-radius: 15px;
+    background-color: rgba(2, 16, 39, 0.9);
+    color: #fff;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .dil {
