@@ -1,9 +1,9 @@
 # Rtstart | RT起始页
 This is a new start page.
 
-### Website | 官网
+### Site | 网站
 ```
-https://programspacestudio.github.io/
+https://programspaceteam.github.io/rtstart
 ```
 # 
 #### 👏 欢迎提出Issues建议于Rtstart GitHub仓库
