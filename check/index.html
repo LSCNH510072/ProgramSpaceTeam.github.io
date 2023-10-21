@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check your browser - 检查您的浏览器</title>
+    <link rel="stylesheet" href="other/style.css">
+    <script>
+        var yj = false;
+    </script>
+    <script src="../script.js"></script>
+</head>
+<body>
+    <button onclick="if(yj) {baitian(); yj = false} else {yejian(); yj = true}; editsvg();" id="yb" class="card" style="margin: auto; position: relative; left: 50%; transform: translate(-50%, 0%);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+    </button>
+    <h1 class="head">Check your browser - 检查您的浏览器</h1>
+    <h2 class="head-body">总览</h2>
+    <h4 class="tishi" id="zlts"></h4>
+    <p id="nhjr"></p>
+    <p id="nhbb"></p>
+    <p id="jrwz"></p>
+    <h2 class="head-body">基本信息</h2>
+    <h4 class="tishi">这些信息适用于所有的网站，是您浏览器的基本信息，十分重要！</h4>
+    <p id="browser-l"></p>
+    <p id="nbrowsers"></p>
+    <p id="vbrowsers"></p>
+    <p id="browsers"></p>
+    <p id="user-dlzfc"></p>
+    <h2 class="head-body">样式渲染</h2>
+    <h4 class="tishi">这些信息用于您的网站是否拥有样式渲染能力，会影响到页面的美观性，但基本不影响使用体验。</h4>
+    <p id="ui-mbl"></p>
+    <ul>
+        <li>支持内核：Chromium 76+ / Safari 9+ 等</li>
+        <li id="mbljrx"></li>
+        <li>使用该样式的站点：Rtstart（RT起始页）</li>
+    </ul>
+    <br>
+    <p id="ui-cssx"></p>
+    <ul>
+        <li>支持内核：Chromium 118+</li>
+        <li id="cssxjrx"></li>
+        <li>没有使用该特性的站点，因为兼容性较差，在未来有望使用该特性。</li>
+    </ul>
+    <script src="other/script.js"></script>
+</body>
+</html>

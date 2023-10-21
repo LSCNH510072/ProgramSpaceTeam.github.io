@@ -1,0 +1,42 @@
+@font-face {
+    font-family: btfFont;
+    src: url(../../TypeFont.woff2) format('woff2')
+}
+
+body {
+    font-family: "btfFont" !important;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.head {
+    text-align: center;
+}
+
+.card {
+    border-radius: 15px;
+    width: 45px;
+    height: 45px;
+    border: #efefef 1px solid;
+    transition: all 0.1s;
+    padding:8px;
+    margin: 10px;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 245, 0.6);
+}
+
+.head-body {
+    margin-top: 50px;
+    border-bottom: #444 2px solid;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.tishi {
+    color: #198156;
+    text-align: center;
+}
