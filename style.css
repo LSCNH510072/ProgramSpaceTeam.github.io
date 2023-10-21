@@ -1,0 +1,101 @@
+@font-face {
+    font-family: btfFont;
+    src: url(TypeFont.woff2) format('woff2')
+}
+
+@keyframes downin{
+    0% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: btfFont;
+    color: #000;
+}
+
+.welcome {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: #666 3px solid;
+    animation: downin 1.2s;
+}
+
+.welcome span {
+    font-size: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    width: 45px;
+    height: 45px;
+    border: #efefef 1px solid;
+    transition: all 0.1s;
+    padding:8px;
+    margin: 10px;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 245, 0.6);
+}
+
+.head {
+    padding: 10px;
+    font-weight: 500;
+}
+
+.dz {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.terms {
+    width: 85vw;
+    padding: 2vw;
+    margin: auto;
+    border: #efefef 1px solid;
+    border-radius: 10px;
+}
+
+.terms .headf {
+    text-align: center;
+    margin: 30px;
+}
+
+.terms h2 {
+    border-bottom: #444 2px solid;
+    margin-bottom: 20px;
+}
+
+.terms .sxrq {
+    text-align: right;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.terms p {
+    text-indent: 2em;
+}
+
+.terms .lk {
+    text-align: right;
+    font-weight: 400;
+}
+
+.hwel {
+    margin-top: 25vh;
+    text-align: center;
+}
+
+.welhr {
+    width: 45vw;
+    margin-top: -5px;
+}
