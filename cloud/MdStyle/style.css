@@ -71,6 +71,8 @@ a {
 }
 
 pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
     font-family: codes;
     border-radius: 15px;
     background-color: rgba(2, 16, 39, 0.9);
