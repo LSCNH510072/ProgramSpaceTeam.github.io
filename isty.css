@@ -1,0 +1,137 @@
+@font-face {
+    font-family: btfFont;
+    src: url(https://ProgramSpaceTeam.github.io/cloud/font/TypeFont.woff2) format('woff2')
+}
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: btfFont;
+    color: #232323;
+}
+
+#left-wel {
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    transform: translate(0%, -50%);
+}
+
+#left-ch {
+    position: absolute;
+    left: 10%;
+    top: 240%;
+    transform: translate(0%, -50%);
+}
+
+#left-do {
+    position: absolute;
+    left: 10%;
+    top: 440%;
+    transform: translate(0%, -50%);
+}
+
+#left-end {
+    position: absolute;
+    left: 10%;
+    top: 640%;
+    transform: translate(0%, -50%);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 2;
+}
+
+button {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: #efefef 1px solid;
+    transition: all 0.3s;
+    align-items: center;
+    color: #666;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: rgba(248, 247, 226, 0.5);
+    color: #000;
+}
+
+button svg {
+    padding-right: 8px;
+}
+
+#right-rt {
+    position: absolute;
+    right: 10%;
+    top: 140%;
+    transform: translate(0%, -50%);
+    text-align: right;
+}
+
+#right-cl {
+    position: absolute;
+    right: 10%;
+    top: 340%;
+    transform: translate(0%, -50%);
+    text-align: right;
+}
+
+#right-au {
+    position: absolute;
+    right: 10%;
+    top: 540%;
+    transform: translate(0%, -50%);
+    text-align: right;
+}
+
+.page {
+    height: 100vh;
+}
+
+#page1 {
+    background-color: rgb(126, 178, 247);
+}
+
+#page2 {
+    background-color: rgb(249, 204, 166);
+}
+
+#page3 {
+    background-color: rgb(180, 249, 166);
+}
+
+#page4 {
+    background-color: rgb(166, 210, 249);
+}
+
+#page5 {
+    background-color: rgb(148, 236, 110);
+}
+
+#page6 {
+    background-color: rgb(227, 210, 81);
+}
+
+#page7 {
+    background-color: rgb(172, 203, 253);
+}
+
+.right button {
+    position: absolute;
+    right: 0;
+}
