@@ -19,7 +19,7 @@ function handleScroll(event) {
     currentPage--;
   }
 
-  // 切换背景颜色和页面
+  // 切换页面
   changePage(currentPage);
 }
 
