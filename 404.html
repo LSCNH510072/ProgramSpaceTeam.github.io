@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Not Found - 404</title>
-</head>
-<body style="text-align: center;">
-    <br>
+  </head>
+  <body style="text-align: center">
+    <br />
     <h1>Not Found - 404</h1>
-    <hr>
+    <hr />
     &copy;ProgramSpaceTeam
-</body>
+    <p id="countdown">将在10秒后跳转到主页</p>
+    <a href="https://ProgramSpaceTeam.github.io">现在跳转</a>
+  
+    <script>
+      var countdownElement = document.getElementById('countdown');
+      var count = 10; // 初始倒计时秒数
+  
+      var countdown = setInterval(function() {
+        countdownElement.innerHTML = '将在' + count + '秒后跳转到主页';
+        count--;
+  
+        if (count === 0) {
+          clearInterval(countdown);
+          countdownElement.innerHTML = '跳转';
+          // 在这里添加页面跳转的代码
+          window.location.href = 'https://ProgramSpaceTeam.github.io';
+        }
+      }, 1000); // 每1000毫秒（即1秒）执行一次倒计时
+    </script>
+  </body>
 </html>
