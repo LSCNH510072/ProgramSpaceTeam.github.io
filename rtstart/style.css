@@ -15,7 +15,7 @@ body{
 .time {
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 12%;
     width: auto;
     height: auto;
     padding: 5px 30px;
@@ -27,27 +27,27 @@ body{
 }
 
 .time:hover {
-    top: 14%;
+    top: 10%;
 }
 
 h1 {
     text-align: center;
-    font-size: 42px;
+    font-size: 40px;
     padding: 10px;
 }
 
 .search-wrapper {
-    position: fixed;
-    margin-top: 30vh;
+    position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    transform: translate(-50%, -100%);
 }
 
 .search-container {
     border-radius: 30px;
     backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.07) !important;
-    width: 35vw;
+    width: 15vw;
     height: 40px;
     border-style:solid !important;
 	border-width:2px !important;
@@ -58,15 +58,15 @@ h1 {
     padding-right: 20px;
     font-family:"font2" !important;
     color: #555;
-    transition: width 0.75s;
+    transition: all 0.75s;
     text-align: center;
 }
 
 .search-container:hover {
-    width: 70vw;
+    width: 45vw;
 }
 .search-container:focus {
-    width: 70vw;
+    width: 50vw;
     transition: 0.4s;
     outline: none;
     backdrop-filter: none;
@@ -96,15 +96,15 @@ h1 {
     }
 }
 
-#myForm {
+/* #myForm {
     position: absolute;
+    top: 30%;
     left: 50%;
-    top: 45%;
     transform: translate(-50%, 0%);
 }
 
 #selectBox {
-    width: 20vw;
+    width: 150px;
     height: 40px;
     border-radius: 15px;
     padding: 5px;
@@ -117,8 +117,8 @@ h1 {
     text-align: center;
     font-size: 16px;
     font-weight: 400;
-    color: #ccc;
-}
+    color: #222;
+} */
 
 #quote {
     position: fixed;
@@ -145,7 +145,7 @@ h1 {
 #gpt {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, 0%);
     padding: 15px;
     border-radius: 10px;

@@ -41,7 +41,7 @@
       <label for="input"></label>
       <input type="text" class="search-container" name="wd" id="input" placeholder="搜索">
     </form>
-    <form id="myForm" action="#" method="POST">
+    <!-- <form id="myForm" action="#" method="POST">
       <select id="selectBox" onchange="updateFormAction()">
         <option value="baidu">百度</option>
         <option value="bing">必应</option>
@@ -73,11 +73,27 @@
           ssname.name = engineDict[se][1];
         }
       }
-    </script>
+    </script> -->
     <p id="quote" onclick="get_yy()"></p>
-    <div class="link">
-      <a href="https://ProgramSpaceTeam.github.io/docs" style="color: #333; text-decoration: none;">Rtstart v5</a> | <a href="https://github.com/ProgramSpaceTeam/ProgramSpaceTeam.github.io/tree/main/rtstart" style="color: #333; text-decoration: none;">GitHub</a>
+    <div class="link" id="link">
+      <a href="https://ProgramSpaceTeam.github.io/docs" style="color: #333; text-decoration: none;">Rtstart v6</a> | <a href="https://github.com/ProgramSpaceTeam/ProgramSpaceTeam.github.io/tree/main/rtstart" style="color: #333; text-decoration: none;">GitHub</a>
     </div>
+    <script>
+      var input = document.getElementById("input");
+      input.addEventListener("focus", function() {
+        document.getElementById('quote').style.opacity = 1
+        document.getElementById('gpt').style.filter = 'blur(10px)'
+        document.getElementById('link').style.opacity = 1
+        document.getElementById('myForm').style.filter = 'blur(10px)'
+      });
+
+      input.addEventListener("blur", function() {
+        document.getElementById('quote').style.opacity = 0
+        document.getElementById('gpt').style.filter = 'none'
+        document.getElementById('link').style.opacity = 0
+        document.getElementById('myForm').style.filter = 'none'
+      });
+    </script>
     <script src="script.js"></script>
     <script src="connection.js"></script>
   </body>
