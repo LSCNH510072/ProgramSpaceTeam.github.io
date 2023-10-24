@@ -66,20 +66,21 @@
       function updateFormAction() {
         var selectBox = document.getElementById("selectBox");
         var fform = document.getElementById("sousf");
-        //var ssname = document.getElementById("ss"); DOM not found
+        var ssname = document.getElementById("input");
 
         var se = selectBox.value;
 
         // 判断单选框是否被选中
         if (se != "") {
           // 修改form的action属性
-          fform.action = engineDict[se][1];
+          fform.action = engineDict[se][0];
+          ssname.name = engineDict[se][1];
         }
       }
     </script>
     <p id="quote" onclick="get_yy()"></p>
     <div class="link">
-      <a href="_README.md" style="color: #333; text-decoration: none;">Rtstart v5</a> | <a href="https://github.com/ProgramSpaceTeam/ProgramSpaceTeam.github.io/tree/main/rtstart" style="color: #333; text-decoration: none;">GitHub</a>
+      <a href="https://ProgramSpaceTeam.github.io/docs" style="color: #333; text-decoration: none;">Rtstart v5</a> | <a href="https://github.com/ProgramSpaceTeam/ProgramSpaceTeam.github.io/tree/main/rtstart" style="color: #333; text-decoration: none;">GitHub</a>
     </div>
     <script src="script.js"></script>
     <script src="connection.js"></script>
