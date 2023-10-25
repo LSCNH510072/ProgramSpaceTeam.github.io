@@ -23,7 +23,7 @@ function sendRequest() {
 }
 
 let timeout = null;
-input.oninput = function () {
+input.onchange = function () {
     if (loading) return;
     // function wrapper to prevent multiple calls
     clearTimeout(timeout);
