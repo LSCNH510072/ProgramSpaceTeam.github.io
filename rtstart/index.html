@@ -8,7 +8,7 @@
     <link rel="icon" href="favicon.png">
     <script>
       var time_jx = true;
-      const version = 6.0;
+      const version = 6.1;
     </script>
 </head>
 <body id="app">
@@ -80,15 +80,15 @@
       <a href="https://ProgramSpaceTeam.github.io/docs" style="color: #333; text-decoration: none;">Rtstart v6</a> | <a href="https://github.com/ProgramSpaceTeam/ProgramSpaceTeam.github.io/tree/main/rtstart" style="color: #333; text-decoration: none;">GitHub</a>
     </div>
     <script>
-      var input = document.getElementById("input");
-      input.addEventListener("focus", function() {
+      var input_s = document.getElementById("input");
+      input_s.addEventListener("focus", function() {
         document.getElementById('quote').style.opacity = 1
         document.getElementById('gpt').style.filter = 'blur(10px)'
         document.getElementById('link').style.opacity = 1
         document.getElementById('myForm').style.filter = 'blur(10px)'
       });
 
-      input.addEventListener("blur", function() {
+      input_s.addEventListener("blur", function() {
         document.getElementById('quote').style.opacity = 0
         document.getElementById('gpt').style.filter = 'none'
         document.getElementById('link').style.opacity = 0
