@@ -3,7 +3,7 @@ fetch('https://ProgramSpaceTeam.github.io/versions.json')
     return response.json();
     })
     .then(function(data) {
-        var x = data['check']
+        var x = data['rtstart']
         if (x > version) {
             alert("您不是最新版本，请刷新缓存以更新到最新版本！")
         } else if (x <= version) {
