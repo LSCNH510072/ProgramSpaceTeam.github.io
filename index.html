@@ -94,7 +94,7 @@
                     <h4 style="line-height: 1.5">Program-zoubg & LSCNH510072 联合创始</h4>
                 </div>
                 <div class="to">
-                    <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                    <ion-icon name="arrow-up-circle-outline" id="to-btn"></ion-icon>
                 </div>
             </div>
         </section>
@@ -111,7 +111,17 @@
                 sections[nextPageIndex].scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        window.addEventListener("load", function () {
+            var btnElement = document.getElementById("to-btn");
+            var targetElement = document.getElementById("page1");
+
+            btnElement.addEventListener("click", function () {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            });
+        });
     </script>
+
 </body>
 
 </html>
