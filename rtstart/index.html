@@ -18,7 +18,7 @@
 <body id="app">
   <p id="gpt"></p>
   <h1 id="tm" class="time" onclick="time_jx = !time_jx"></h1>
-  <form action="https://www.baidu.com/s" target="_blank" class="search-wrapper" id="sousf">
+  <form target="_blank" class="search-wrapper" id="sousf">
     <label for="input"></label>
     <input type="text" class="search-container" name="wd" id="input" placeholder="搜索">
     <div class="choose">
@@ -28,69 +28,29 @@
       </button>
       <div class="choose-div" id="chdiv">
         <label>
-          <input type="radio" name="choose">
+          <input type="radio" name="choose" class="engine-option" data-type="BAIDU">
           <span>百度</span>
         </label>
         <label>
-          <input type="radio" name="choose">
+          <input type="radio" name="choose" class="engine-option" data-type="BING">
           <span>必应</span>
         </label>
         <label>
-          <input type="radio" name="choose">
+          <input type="radio" name="choose" class="engine-option" data-type="GOOGLE">
           <span>谷歌</span>
         </label>
         <label>
-          <input type="radio" name="choose">
+          <input type="radio" name="choose" class="engine-option" data-type="SO">
           <span>360</span>
         </label>
         <label>
-          <input type="radio" name="choose">
+          <input type="radio" name="choose" class="engine-option" data-type="DUCKDUCKGO">
           <span>DuckDuckGo</span>
         </label>
       </div>
     </div>
   </form>
-  <!-- <form action="https://baidu.com/s" target="_blank" class="search-wrapper" id="sousf">
-    <label for="input"></label>
-    <input type="text" class="search-container" name="wd" id="input" placeholder="搜索">
-    <div class="choose">
-      <button type="button" class="choose-button" id="chbtn">
-        <span>百度</span>
-        <ion-icon name="chevron-down-outline"></ion-icon>
-      </button>
-      <div class="choose-div" id="chdiv">
-        <label>
-          <input type="radio" name="choose">
-          <span>百度</span>
-        </label>
-        <label>
-          <input type="radio" name="choose">
-          <span>必应</span>
-        </label>
-        <label>
-          <input type="radio" name="choose">
-          <span>谷歌</span>
-        </label>
-        <label>
-          <input type="radio" name="choose">
-          <span>360</span>
-        </label>
-        <label>
-          <input type="radio" name="choose">
-          <span>DuckDuckGo</span>
-        </label>
-      </div>
-    </div>
-  </form> -->
-  <!-- <form id="myForm" action="#" method="POST">
-    <select id="selectBox" onchange="updateFormAction()">
-      <option value="google">谷歌</option>
-      <option value="bing">必应</option>
-      <option value="baidu">百度</option>
-      <option value="a360">360</option>
-      <option value="ddg">DuckDuckGo</option>
-    </select>
-  </form> -->
+
   <p id="quote" onclick="get_yy()"></p>
   <div class="link" id="link">
     <a href="https://ProgramSpaceTeam.github.io/docs" style="color: #333; text-decoration: none;">Rtstart v6</a> | <a
@@ -103,6 +63,7 @@
   <script>
     const chbtn = document.getElementById("chbtn")
     const chdiv = document.getElementById("chdiv")
+    
 
     chbtn.addEventListener('click', () => {
       chbtn.classList.toggle('toggle')
@@ -110,6 +71,43 @@
 
     const radioLabels = document.querySelectorAll('.choose-div label');
     const buttonSpan = document.querySelector('.choose-button span');
+    /** @type {HTMLInputElement[]} */
+    const radioOptions = document.querySelectorAll('.engine-option');
+    /** @type {HTMLInputElement} */
+    const input = document.querySelector('#input');
+
+    let engine = 'BAIDU';
+
+    for (let radioOption of radioOptions) {
+      radioOption.addEventListener('change', () => {
+        if (radioOption.checked) {
+          engine = radioOption.dataset['type'];
+        }
+      });
+    }
+
+    /** @type {HTMLFormElement} */
+    const form = document.querySelector('#sousf');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      searchContent = input.value;
+      let url = '';
+      switch (engine) {
+        case 'BAIDU':
+          url = `https://www.baidu.com/s?wd=${searchContent}`;
+          break;
+        
+        case 'BING':
+          url = `https://cn.bing.com/search?q=${searchContent}`;
+          break;
+        
+        case 'SO':
+          url = `https://so.com/s?q=${searchContent}`;
+          break;
+      }
+      window.open(url);
+    });
 
     radioLabels.forEach(label => {
       label.addEventListener('click', () => {
