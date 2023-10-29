@@ -44,27 +44,6 @@ function updateTime() {
 
 setInterval(updateTime, 100);
 
-let engineDict = {
-  google: ["https://google.com/search", "q"],
-  bing: ["https://bing.com/search", "q"],
-  baidu: ["https://baidu.com/s", "wd"],
-  a360: ["https://so.com/s", "q"],
-  ddg: ["https://duckduckgo.com", "q"],
-};
-
-function updateFormAction() {
-  var se = selectBox.value;
-  // 判断单选框是否被选中
-  if (se != "") {
-    // 修改form的action属性
-    fform.action = engineDict[se][0];
-    input_s.name = engineDict[se][1];
-    localStorage.setItem("se", se);
-  }
-}
-
-selectBox.value = localStorage.getItem("se");
-
 input_s.addEventListener("focus", function () {
   quote.style.opacity = 1;
   gpt.style.filter = "blur(10px)";
@@ -77,4 +56,73 @@ input_s.addEventListener("blur", function () {
   gpt.style.filter = "none";
   link.style.opacity = 0;
   myForm.style.filter = "none";
+});
+
+const chbtn = document.getElementById("chbtn")
+const chdiv = document.getElementById("chdiv")
+
+
+chbtn.addEventListener('click', () => {
+  chbtn.classList.toggle('toggle')
+})
+
+const radioLabels = document.querySelectorAll('.choose-div label');
+const buttonSpan = document.querySelector('.choose-button span');
+/** @type {HTMLInputElement[]} */
+const radioOptions = document.querySelectorAll('.engine-option');
+/** @type {HTMLInputElement} */
+const input = document.querySelector('#input');
+
+let engine = 'BAIDU';
+
+for (let radioOption of radioOptions) {
+  radioOption.addEventListener('change', () => {
+    if (radioOption.checked) {
+      engine = radioOption.dataset['type'];
+    }
+  });
+}
+
+/** @type {HTMLFormElement} */
+const form = document.querySelector('#sousf');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  searchContent = input.value;
+  let url = '';
+  switch (engine) {
+    case 'BAIDU':
+      url = `https://www.baidu.com/s?wd=${searchContent}`;
+      break;
+    
+    case 'BING':
+      url = `https://cn.bing.com/search?q=${searchContent}`;
+      break;
+    
+    case 'SO':
+      url = `https://so.com/s?q=${searchContent}`;
+      break;
+
+    case 'GOOGLE':
+      url = `https://google.com/search?q=${searchContent}`
+      break;
+
+    case 'DUCKDUCKGO':
+      url = `https://duckduckgo.com/?q=${searchContent}`
+      break;
+    case 'BILIBILI':
+      url = `https://search.bilibili.com/all?keyword=${searchContent}`
+      break;
+    case 'GITHUB':
+      url = `https://github.com/search?q=${searchContent}`
+      break;
+  }
+  window.open(url);
+});
+
+radioLabels.forEach(label => {
+  label.addEventListener('click', () => {
+    const labelText = label.querySelector('span').textContent;
+    buttonSpan.textContent = labelText;
+  });
 });

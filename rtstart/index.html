@@ -28,24 +28,39 @@
       </button>
       <div class="choose-div" id="chdiv">
         <label>
+          <img src="https://psstatic.cdn.bcebos.com/video/wiseindex/aa6eef91f8b5b1a33b454c401_1660835115000.png">
           <input type="radio" name="choose" class="engine-option" data-type="BAIDU">
           <span>百度</span>
         </label>
         <label>
+          <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.kUvoP7EpsWCvyHLzrl8_TQAAAA?pid=ImgDet&rs=1">
           <input type="radio" name="choose" class="engine-option" data-type="BING">
           <span>必应</span>
         </label>
         <label>
+          <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.jzpEpg2QzzXWjH4-4CPg2QHaHa?pid=ImgDet&rs=1" alt="">
           <input type="radio" name="choose" class="engine-option" data-type="GOOGLE">
           <span>谷歌</span>
         </label>
         <label>
+          <img src="https://pic.anxz.com/d/file/20190830/61be42561d40b752bfda18c69751dbba.png" alt="">
           <input type="radio" name="choose" class="engine-option" data-type="SO">
           <span>360</span>
         </label>
         <label>
+          <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.T_ANqCZtz61_G6z_-jCNRwHaHa?pid=ImgDet&rs=1">
           <input type="radio" name="choose" class="engine-option" data-type="DUCKDUCKGO">
           <span>DuckDuckGo</span>
+        </label>
+        <label>
+          <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.kjCUP06WDUMR88i5wo2SqwHaHa?w=20&h=20&c=7&r=0&o=5&pid=1.7">
+          <input type="radio" name="choose" class="engine-option" data-type="GITHUB">
+          <span>GitHub</span>
+        </label>
+        <label>
+          <img src="https://www.bilibili.com/favicon.ico">
+          <input type="radio" name="choose" class="engine-option" data-type="BILIBILI">
+          <span>bilibili</span>
         </label>
       </div>
     </div>
@@ -60,62 +75,6 @@
   <script src="version.js"></script>
   <script src="script.js"></script>
   <script src="connection.js"></script>
-  <script>
-    const chbtn = document.getElementById("chbtn")
-    const chdiv = document.getElementById("chdiv")
-    
-
-    chbtn.addEventListener('click', () => {
-      chbtn.classList.toggle('toggle')
-    })
-
-    const radioLabels = document.querySelectorAll('.choose-div label');
-    const buttonSpan = document.querySelector('.choose-button span');
-    /** @type {HTMLInputElement[]} */
-    const radioOptions = document.querySelectorAll('.engine-option');
-    /** @type {HTMLInputElement} */
-    const input = document.querySelector('#input');
-
-    let engine = 'BAIDU';
-
-    for (let radioOption of radioOptions) {
-      radioOption.addEventListener('change', () => {
-        if (radioOption.checked) {
-          engine = radioOption.dataset['type'];
-        }
-      });
-    }
-
-    /** @type {HTMLFormElement} */
-    const form = document.querySelector('#sousf');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      searchContent = input.value;
-      let url = '';
-      switch (engine) {
-        case 'BAIDU':
-          url = `https://www.baidu.com/s?wd=${searchContent}`;
-          break;
-        
-        case 'BING':
-          url = `https://cn.bing.com/search?q=${searchContent}`;
-          break;
-        
-        case 'SO':
-          url = `https://so.com/s?q=${searchContent}`;
-          break;
-      }
-      window.open(url);
-    });
-
-    radioLabels.forEach(label => {
-      label.addEventListener('click', () => {
-        const labelText = label.querySelector('span').textContent;
-        buttonSpan.textContent = labelText;
-      });
-    });
-  </script>
 </body>
 
 </html>

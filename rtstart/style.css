@@ -186,10 +186,15 @@ h1 {
   border-radius: 5px;
 }
 
+.choose-div label img {
+  width: 20px;
+  height: 20px;
+}
+
 .choose-button.toggle ~ .choose-div
 {
-  height: 100px;
-  width: 201px;
+  height: 150px;
+  width: 210px;
 }
 
 .choose-button {
