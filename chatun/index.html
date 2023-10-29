@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatun - Completely free multi-model AI</title>
+    <link rel="stylesheet" href="public/style.css">
+    <script>
+        var web = true;
+        var yj = false;
+        const version = 1.4;
+        var tokens = 'anonymous';
+    </script>
+</head>
+<body>
+    <div class="header">
+        <input type="radio" name="Models" class="models" id="gpt-3.5" value="gpt-3.5-turbo" checked>
+        <label for="gpt-3.5">GPT-3.5<span>NoneKey</span></label>
+        <input type="radio" name="Models" class="models" id="claude" value="claude-1">
+        <label for="claude">Claude<span>NoneKey</span></label>
+        <input type="radio" name="Models" class="models" id="claude-slack" value="claude-slack">
+        <label for="claude-slack">Claude-Slack</label>
+        <input type="radio" name="Models" class="models" id="claude2" value="claude-2">
+        <label for="claude2">Claude-2</label>
+        <input type="radio" name="Models" class="models" id="gpt-3.5-16k" value="gpt-3.5-turbo-16k">
+        <label for="gpt-3.5-16k">GPT-3.5-16k</label>
+        <input type="radio" name="Models" class="models" id="palm" value="chat-bison-001">
+        <label for="palm">PaLM2</label>
+        <input type="radio" name="Models" class="models" id="newbing" value="bing-creative">
+        <label for="newbing">New Bing</label>
+        <input type="radio" name="Models" class="models" id="zhipu" value="zhipu-chatglm-lite">
+        <label for="zhipu">ZhiPu AI</label>
+        <button onclick="if(yj) {baitian(); yj = false} else {yejian(); yj = true}; editsvg();" id="yb" class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        </button>
+    </div>
+    <div class="chat-container">
+        <div id="chat">
+
+        </div>
+        <div class="input-container">
+            <button type="button" onclick="web = !web; atweb()" id="webtn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 web enable"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></button>
+            <input type="text" id="input" placeholder="询问">
+            <button type="button" onclick="enter_input();" id="input_btn"><svg id="inbtn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z"></path></svg></button>
+        </div>
+    </div>
+    <script src="public/script.js"></script>
+    <script src="public/web.js"></script>
+    <script src="public/yj.js"></script>
+    <script src="public/version.js"></script>
+</body>
+</html>
